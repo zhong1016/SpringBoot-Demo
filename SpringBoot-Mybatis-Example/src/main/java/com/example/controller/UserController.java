@@ -45,9 +45,9 @@ public class UserController {
         return service.updateUser(user);
     }
 
-    @DeleteMapping("")
-    public Object deleteById(String id) {
+    @DeleteMapping("/{id}")
+    public Object deleteById(@PathVariable Integer id) {
 
-        return service.deleteUserById(Integer.parseInt(id));
+        return service.deleteUserById(id);
     }
 }
